@@ -37,7 +37,7 @@
     "superagent": "^3.4.1"
   },
   "devDependencies": {
-    "bitcore-wallet-service": "github:gobytecoin/bitcore-wallet-service",
+    "bitcore-wallet-service": "github:apollomatheus/bitcore-wallet-service",
     "browserify": "^13.1.0",
     "chai": "^1.9.1",
     "coveralls": "^2.11.2",
