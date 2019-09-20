@@ -4,15 +4,14 @@ var _ = require('lodash');
 var chai = chai || require('chai');
 var sinon = sinon || require('sinon');
 var should = chai.should();
-var log = require('../ts_build/log');
+var log = require('../lib/log');
 
-describe('log utils', function () {
-  afterEach(function () {
+describe('log utils', function() {
+  afterEach(function() {
     log.setLevel('info');
   });
 
-
-  it('should log .warn', function () {
+  it('should log .warn', function() {
     if (console.warn.restore)
       console.warn.restore();
 
@@ -28,7 +27,7 @@ describe('log utils', function () {
   });
 
 
-  it('should log .fatal', function () {
+  it('should log .fatal', function() {
     if (console.log.restore)
       console.log.restore();
 
@@ -44,7 +43,7 @@ describe('log utils', function () {
   });
 
 
-  it('should not log debug', function () {
+  it('should not log debug', function() {
     sinon.stub(console, 'log');
     log.setLevel('info');
     log.debug('hola');
@@ -52,12 +51,12 @@ describe('log utils', function () {
     console.log.restore();
   });
 
-  it('should log debug', function () {
+  it('should log debug', function() {
     log.getLevels().debug.should.equal(0);
     log.getLevels().fatal.should.equal(5);
   });
 
-  it('should log nothing if logLevel is set to silent', function () {
+  it('should log nothing if logLevel is set to silent', function() {
     var sandbox = sinon.sandbox.create();
     var cl = sandbox.stub(console, 'log');
 
@@ -73,7 +72,7 @@ describe('log utils', function () {
     sandbox.restore();
   });
 
-  it('should not create a log.silent() method', function () {
+  it('should not create a log.silent() method', function() {
     should.not.exist(log.silent);
   });
 
