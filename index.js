@@ -1,5 +1,2 @@
-var Client = require('./lib');
+var Client = require('./packages/bitcore-wallet-client/ts_build');
 module.exports = Client;
-
-// Errors thrown by the library
-Client.errors = require('./lib/errors');
