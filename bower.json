@@ -1,17 +1,17 @@
 {
-  "name": "bitcore-wallet-client-gobyte",
+  "name": "bitcore-wallet-client",
   "main": "index.js",
   "version": "2.1.1",
-  "homepage": "https://github.com/gobytecoin/bitcore-wallet-client-gobyte",
+  "homepage": "https://github.com/bitpay/bitcore-wallet-client",
   "authors": ["BitPay Inc"],
-  "description": "Client for bitcore-wallet-service-gobyte",
+  "description": "Client for bitcore-wallet-service",
   "keywords": [
-    "gobyte",
-    "copay-gobyte",
+    "bitcoin",
+    "copay",
     "multisig",
     "wallet",
     "client",
-    "bitcore-gobyte"
+    "bitcore"
   ],
   "ignore": [
     "**/.*",
